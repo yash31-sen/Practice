@@ -12,6 +12,16 @@ approaches ->
 1) with 2 arrays (divide the array into two parts recurssion will sort them and them combine them)
 2) with pointers
 
+
+
+Questions:
+
+1) What is the complexity of merge sort ?
+Ans=> 
+
+2) why merge sort has same complexity for al of the cases 
+Ans=>    Merge sort always divides the array in half, so the number of comparisons and merges is always the same, regardless of the initial order of the elements.
+
 */
 
 #include <bits/stdc++.h>
