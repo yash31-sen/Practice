@@ -1,0 +1,257 @@
+What is oops?
+Ans-> Programming Technique where this are revolve around objects.
+	-> it is an template
+
+Object-> it is an entity which have some properties and behaviour.
+	-> instance of class
+
+when we create oject only then memory get allocated to it 
+
+*for empty class i.e. class with nothing there is 1 byte of memory alocated to object ()
+8we can also include class from diffrent file by using #include<path_of_file> and then same syntax; 
+
+
+
+------------------------------------------\
+Access modifiers:-> Any data member/function where we can access it is defined by access modifiers.
+There are 3 types of modifieres:
+	-> public  -> all those members that are in public we can access them both inside or outside the class
+	-> private (default) -> all memebers are accessible inside the class but not outside the calss
+	-> protected ->  pending
+
+
+
+
+-------------------------------------------------
+Getter/ Setter function:
+	-> these are functions inside the class through which we can access the private members of class 
+	-> setter thet sets the value of member, also we can set conditions with it 
+	-> getter to get the value of member
+
+
+--------------------------------------------------------------------
+Advantages of OOPS:
+-> Code resuability.
+-> Reduce redundancy.
+->  Bottom Approach
+-> Helps in hiding un-necessary details with abstraction.
+
+
+
+
+
+
+
+
+
+
+???????????????????????????
+What is padding and Greedy alignment?
+
+
+
+
+--------------------------------------------------------------
+*when we create any object firstly its constructor get called, which has no return type and input parameter
+** when we create a class its constructor automatically get called
+** default constructor is public by default but we can change it as per our need
+** this is a pointer which stores the address of current pointer 
+			-> it is very usefull when we have to use below scnenerio
+				-> health=health     -:> it can ber written as 
+				-> health =this.health    -:> where this.health is nearest object in the class
+** ones we create our own constructor definition then defualt constructor will automatically get destroyed.
+
+**Copy contructor:
+	-> A copy constructor is called automatically when an object is initialized from another object of the same type
+** we can also create our own copy constructor like A(&a)-> here we have to pass the value of other object by refrence instead of by value, if we passed it by value then it stuck in a loop or give error. 
+
+
+
+**Shallow and Deep Copy:
+		->default copy constructor does shallow copy
+		-> ** in shallow copy the values of second object has reffrence to the value of first object 
+			when we change the value of first object the value of second object automatically get changed.
+		-> ** in deep copy the new members are created an the value of first object is stored in that new member before any change 
+			in first object, here if the value of first object get changd then also the value of second object does not 				changes.
+
+**Copy assignment operator
+
+
+**Distructor-> used to deallocate memory
+**when a class created it also get automatically created like default constructor
+** for objects we created using static allocation the distructor automatically get called
+** but we have to call the distructor mannualy for object created with dynamic memory allocation 
+				-> delete obj_name;
+
+
+
+
+
+
+
+---------------
+const keyword and creating ojects with it 
+use of it in allocation
+initialization list
+
+
+
+
+---------------------------------
+Static Keyword:
+** we don't have to craete an object to use static keywords or members.
+** declared as static var_name=12;
+**called as ||||    data_type ClassName:: field_name=value;
+**   ::   -> scope resolution operator
+
+
+
+
+
+-----------------------------------------
+Static Functions:
+** no nedd to create object to call them
+** doesn't have this keyword
+** they can access static members only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+Encapsulation:
+
+wraping a data members or functions is called Encapsulation
+
+Fully Encapsulated class:
+	-> a calss in which all the members are private is caled as fully encapsulated class
+advantages:
+	-> Data hidden inside a class instead of setting here and there in the program, security ↑
+ 	-> if we want we can make calss read only
+	-> code reusabilty
+	-> unit testing 
+
+
+
+
+
+
+
+
+________________________________________________________________________________________________________________________________________
+Inheritance:
+-> when a child calss inherits the porperties or attrubutes of parent class then the term is called is Inheritance.
+** To inherit multiple class use this syntax:
+			-> class A:public B, public C{
+
+			};
+**Private data members of any class can not be inherited
+** Protected data memebers are kind of private data members with diffrence that they are accessible to derived class and also within the same class, where as private data members are accessible within the class only.
+
+
+Specifiers and their accessibility
+----------------------------------------------------------------------------------------------------------------
+base class member  |        Public			|     Protected 			|               Private                |
+access specifier   |						|							|									   |
+----------------------------------------------------------------------------------------------------------------
+Public			   |		Public			|	  Protected   			|				Private				   |
+----------------------------------------------------------------------------------------------------------------
+Protected		   |		Protected		|	  Protected				|			    Private    			   |
+----------------------------------------------------------------------------------------------------------------
+Private 		   |	Not accessible		|    Not accessible			|			Not accessible			   |
+----------------------------------------------------------------------------------------------------------------
+
+
+Types of Inheritances:
+
+1) singel 
+2) multi level
+3) multiple
+4) hybrid
+5) hirarchical
+________________
+3)multiple-> in multiple inheritance ther are 2 or more base/parent class and single child class, means single child class is inheriting the properties of multiple base classes
+
+4) hirarchical -> one class serves as parent class for more than one child class
+
+5)Hybrid -> combination of more than one type of inheritance 
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+Inheritance ambiguity:
+if Class B is ingeriting Class A, and both the class have same member function in it fo eg-> print()
+then after calling it with object of child class which class function will call this is called inheritance ambiguity.
+
+** to resolve it we make use of scope resolution operator.
+			-> obj.A::print();   //prints A function
+			   obj.B::print();	// prints B function
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Polymorphism:
+poly-> man
+morph-> forms
+
+
+eg->   a son 
+he is son of his parents, brother of his sibling, cosin of his cosin etc.
+ther are 2 types of polymorphism 
+-> comppile tiem
+-> run time
+
+
+
+Compile time polymorphism (Static Polymorphism):
+-> tell in compile time that what entity is existing at what time 
+		-> function overloading 
+		-> operator overloading 
+
+
+Function overloading:
+	-> in it if the fuction with same name but diffrent number of type of parameters are used.
+	-> if the return type of function is diffrent but the paremeteres are same then it doesn't work.
+Operator overloading:
+
+Thes operators can't be overloaded:
+sizeof
+:: (scope resolution)
+. (member access)
+?: (ternary operator)
+* (member pointer selector)
+
+
+** we can perform substraction from + operator with the help of operator overloading 
+syntax:
+	-:> void operator+ (B &obj){
+		int v1=this->a;
+		int v2=obj.a;
+		cout<<" output: "<<v1-v2<<endl;
+	}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Run time Polymorphism(Dynamic Polymorphism):
+	-> works only with Inheritance
+	-> it includes:
+		-> method overriding
+			-> here the name and paramets of the fucntion must be same 
+			-> signature must be diffrent
+
+
+
+Abstraction:
+	-> implementation hiding
+			

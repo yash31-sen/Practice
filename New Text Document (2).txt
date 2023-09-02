@@ -1,0 +1,77 @@
+Problem Statement
+
+You are given an array 'A' consisting of 'N' positive integers.
+
+You can perform the following operation any number of times:
+
+Choose any index 'i' such that 1 <= 'i'<= 'N' and select any integer 'X' such that '1 <= X<
+
+A[i]', change 'A[i]' to 'A[i] xor X'.
+
+Find the maximum possible AND of the whole array 'A'.
+
+Note: AND of the array is 'A[1]) & A[2] & A[3] &... & A[N]'.
+
+Example:
+
+'N' = 3
+
+'A' [3, 5, 4]
+
+We do the following operations:
+
+Change 'A[2]' to 'A[2] xor 2 = 7'.
+Change 'A[3]' to 'A[3] xor 3 = 7'.
+
+The AND of the new array is '3 & 7 & 7 = 3'. 
+It can be shown that this is the maximum possible AND.
+
+
+
+Hint:
+The operation can activate all bits less than an element's MSB (Most
+Significant Bit). Use the element with the smallest MSB to determine the
+answer.
+
+
+Input Format:
+The first line contains an integer 'T', which denotes the number of test
+cases to be run. Then the test cases follow.
+
+The first line of every test case contains an integer 'N' ,
+denoting the length of the array.
+
+each test case's second line contains 'N' space-separated elements of an array 'A'
+
+
+Output Format:
+For each test case, return the maximum possible AND of the array.
+Constraints:
+
+1 <= T <= 10
+
+1 <= N <= 10^5
+
+1 <= A[i] <= 10^6
+
+Time Limit: 1 sec
+
+
+
+
+Sample Input 1:
+
+2
+
+4
+
+1 3 5 8
+
+2
+
+6 7
+
+Sample Output 1:
+1
+7
+
