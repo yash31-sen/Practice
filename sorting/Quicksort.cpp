@@ -15,13 +15,13 @@ Algorithm:
 
 Questions based on Quick sort:
 1)what is the time complexity of quick sort?
-ANS=>   Best case	O(n log n)  (pivot[choosen radomly] is meidan or array)
-        Average case	O(n log n)  (pivot[chooosen randomly] is not madian of array)
-        Worst case	O(n^2)  (pivot smallest or largest element of array)
+ANS=>   Best case	 O(n log n)  (pivot[choosen radomly] is meidan or array)
+        Average case O(n log n)  (pivot[chooosen randomly] is not madian of array)
+        Worst case	 O(n^2)  (pivot smallest or largest element of array)
 
 */
 
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 int partition(int *arr, int s, int e)
 {

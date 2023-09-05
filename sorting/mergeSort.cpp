@@ -17,19 +17,19 @@ approaches ->
 Questions:
 
 1) What is the complexity of merge sort ?
-Ans=> 
+Ans=> O(nlogn)
 
-2) why merge sort has same complexity for al of the cases 
+2) why merge sort has same complexity for al of the cases
 Ans=>    Merge sort always divides the array in half, so the number of comparisons and merges is always the same, regardless of the initial order of the elements.
 
 */
 
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 void merge(int *arr, int s, int e)
 {
-    int mid = s+(e-s)/2;
+    int mid = s + (e - s) / 2;
     int l1 = mid - s + 1;
     int l2 = e - s;
     int arr1[l1];
@@ -61,12 +61,10 @@ void merge(int *arr, int s, int e)
     while (id1 < l1)
     {
         arr[k++] = arr1[id1++];
-        
     }
     while (id2 < l2)
     {
         arr[k++] = arr2[id2++];
-        
     }
 }
 void mergeSort(int *arr, int s, int e)
@@ -75,7 +73,7 @@ void mergeSort(int *arr, int s, int e)
     {
         return;
     }
-    int mid = s+(e-s)/2;
+    int mid = s + (e - s) / 2;
     mergeSort(arr, s, mid);
     mergeSort(arr, mid + 1, e);
     merge(arr, s, e);
@@ -85,9 +83,10 @@ int main()
     int arr[] = {1, 3, 5, 6, 7, 5};
     int n = sizeof(arr) / sizeof(arr[0]);
     mergeSort(arr, 0, n - 1);
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
     }
-    cout<<endl;
+    cout << endl;
     return 0;
 }
