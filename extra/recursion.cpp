@@ -352,4 +352,11 @@
 //     return 0;
 // }
 
-    
+    #include<bits/stdc++.h>
+    using namespace std;
+    int main()
+    {
+    cout<<a;
+    int a=4;
+    return 0;
+    }
