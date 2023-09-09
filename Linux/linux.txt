@@ -1,0 +1,84 @@
+linux features-> 
+open source 
+secure-> need cmd to run
+	-> fragment size is  512bytes so need to run cmd if file with more kb come then need to run cmd
+no hardware specific req (portable)
+fast -> disk partion size is fix to 8 and then fancing comes and if crosses it then it becoes slow and linux new v size is 4 gb
+plug and play
+windows server reboot ones every 3 yr but linux din't reboot untill hardware life
+no need of antivirus
+
+type of file systems
+
+ext2
+ext3
+ext4  *
+jfs
+ReiserFS
+XFS
+Btrfs
+
+
+
+gpl -> genral poublic licence.
+gpl -> avalable for free for everyone
+
+
+MBR(512byte)-> Master Boot Record. (divided in 3 parts)
+						446byte | 64byte |   2byte
+					->lilo loader  (partition)   (flag)
+					(not used)                      (is all runnning good or not )
+					->grab loader				
+					(now uses)
+					vmlinuz
+					(kernel 
+					image file)
+					(virtual
+					 machine linuz)
+					->Initrd
+					(initialze 
+					ram disk launches 
+initial or imp files)
+**it is in compress gunzip unzip it after loading.
+
+by default ubuntu at top make it at last or at other position.
+
+
+directories in linux->
+
+2.) /sbin->System binary 
+bniary commands run by user admin both but sys bin ony admin.
+	-> Fdformate(flppy disk formate) ,mkFs (make file system) ,mkFs-ext-2 ,mkFs-ext-3,mkfs-ext-4,Fdisk(formate disk (for partion),
+	reboot;
+3. /boot -> Alll configuration file to boot system
+	-> MBR
+-> all booting info
+
+4. /root-> admin(linux) administrator ( windows )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[
+windows confg file
+
+-> io.sys - check io devices are connected correctly or not if not then display it 
+-> msDos.sys - issential hardware operations launch by it 
+-> command.com - it is ven file (if it not run then nothing can load in main memory)
+]
+
+
+

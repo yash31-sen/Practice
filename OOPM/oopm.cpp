@@ -2,7 +2,21 @@
 using namespace std;
 class A
 {
+
+    int hello;
 public:
+
+void setter(int f){
+
+    hello=f;
+}
+
+
+
+void getter(){
+    cout<<"I am a: "<<hello<<endl;
+}
+
     A()
     {
         cout << "Constructor called!!" << endl;
@@ -110,6 +124,10 @@ int main()
     // ob1.a=2;
     // ob1.a=3;
     // ob1+ob2;
+
+    A a;
+    a.setter(10010);
+    a.getter();
     B o1;
     B o2;
     o1.a = 34;

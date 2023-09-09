@@ -25,7 +25,7 @@ There are 3 types of modifieres:
 -------------------------------------------------
 Getter/ Setter function:
 	-> these are functions inside the class through which we can access the private members of class 
-	-> setter thet sets the value of member, also we can set conditions with it 
+	-> setter that sets the value of member, also we can set conditions with it 
 	-> getter to get the value of member
 
 
